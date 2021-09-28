@@ -33,7 +33,7 @@ public class SwaggerConfig {
             "Sample API with SpringBoot",
             "1.0",
             "https://github.com/najoanregi",
-            new Contact("Regi Najoan", "https//github.com/reginajoan","najoanregi@gmail.com"),
+            new Contact("name", "github-name","email"),
             "Apache 2.0",
             "https://www.apache.com",
             Collections.emptyList()
