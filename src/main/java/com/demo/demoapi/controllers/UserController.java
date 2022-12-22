@@ -22,13 +22,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/api/v1/users")
+@RequestMapping("/auth/v1/users")
 public class UserController {
     
     @Autowired
     private UserService userService;
 
-    @PostMapping
+    @PostMapping("/register")
     public ResponseEntity<?> register(@Valid @RequestBody UserData userData, Errors errors){
         ResponseData response = new ResponseData();
         if(!errors.hasErrors()){

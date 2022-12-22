@@ -10,6 +10,6 @@ public class HomeController {
     
     @GetMapping
     public String welcome(){
-        return "Welcome to demo springboot api";
+        return "Welcome to demo springboot api url swagger http://localhost:8080/swagger-ui.html";
     }
 }

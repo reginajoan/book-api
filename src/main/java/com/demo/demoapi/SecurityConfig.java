@@ -30,6 +30,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.addFilterBefore(new CorsConfig(), ChannelProcessingFilter.class);
         http.authorizeRequests()
             .antMatchers("/").permitAll()
+            .and().authorizeRequests().antMatchers("/auth/**").permitAll()
             .antMatchers(HttpMethod.POST,"/api/v1/users/**").permitAll()
             .anyRequest().fullyAuthenticated()
             .and().httpBasic().and().csrf().disable();
